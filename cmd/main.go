@@ -2,7 +2,7 @@ package main
 
 //import gin
 import (
-	"alpaca/internal/app/server"
+	"codeingerman/alpaca/internal/app/server"
 	
 	"fmt"
 

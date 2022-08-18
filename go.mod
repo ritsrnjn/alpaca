@@ -1,4 +1,4 @@
-module alpaca
+module codeingerman/alpaca
 
 go 1.17
 
