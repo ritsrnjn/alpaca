@@ -15,10 +15,19 @@ func NewRestServer(engine *gin.Engine) *restServer {
 }
 
 func (s *restServer) Start() {
-	s.engine.GET("/random", func(c *gin.Context) {
+	
+	s.engine.GET("", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-            "message": "You have reached the random endpoint running on alpaca server.",
+            "message": "You have reached the base endpoint running on alpaca server.",
         })
 	},
 	)
+
+	s.engine.GET("/game", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+            "game": "server",
+        })
+	},
+	)
+
 }
