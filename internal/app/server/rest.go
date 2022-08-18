@@ -16,7 +16,9 @@ func NewRestServer(engine *gin.Engine) *restServer {
 
 func (s *restServer) Start() {
 	s.engine.GET("/random", func(c *gin.Context) {
-		c.String(200, "You have reached the random endpoint running on alpaca server")
+		c.JSON(200, gin.H{
+            "message": "You have reached the random endpoint running on alpaca server.",
+        })
 	},
 	)
 }
