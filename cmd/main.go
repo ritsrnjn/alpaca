@@ -5,6 +5,7 @@ import (
 	"alpaca/internal/app/server"
 	
 	"fmt"
+	"os"
 
 	"github.com/gin-gonic/gin"
 )
@@ -16,6 +17,7 @@ const (
 )
 
 func main() {
+	port := os.Getenv("PORT")
 
 	engine := gin.Default()
 
@@ -23,7 +25,7 @@ func main() {
 	restServer.Start()
 	
 
-	err := engine.Run(":" + appPort)
+	err := engine.Run(":" + port)
 	if err != nil {
 		fmt.Println("Error starting server: " + err.Error())
 	} 
