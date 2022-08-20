@@ -16,9 +16,9 @@ func NewRestServer(engine *gin.Engine) *restServer {
 
 func (s *restServer) Start() {
 	
-	s.engine.GET("", func(c *gin.Context) {
+	s.engine.GET("/play", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-            "message": "You have reached the base endpoint running on alpaca server.",
+            "message": "Billu-007 You have reached the base endpoint running on alpaca server.",
         })
 	},
 	)
